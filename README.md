@@ -1,4 +1,4 @@
-# trayprey's Link
+# trayprey's Links App
   ![Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Description
 An application that shows my links.
