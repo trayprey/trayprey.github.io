@@ -1,0 +1,95 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+}
+
+header {
+    background-color: #333; /* Dark header background */
+    color: #fff; /* White text for header */
+    padding: 1rem 0;
+    text-align: center; /* Center the header content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px; /* Limit the width of the main content */
+    margin: 20px auto; /* Center the main content */
+    background-color: white; /* White background for the main content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: #333; /* Dark headings */
+}
+
+img {
+    float: left; /* Image on the left */
+    margin-right: 1rem;
+    border-radius: 50%; /* Make the image circular */
+    max-width: 150px; /* Limit the image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+ul {
+    list-style-type: disc; /* Use bullet points for lists */
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Ensure it stays at the bottom */
+    width: 100%;
+}
+
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design - Basic example */
+@media (max-width: 768px) {
+    img {
+        float: none; /* Image above the text on smaller screens */
+        margin: 0 auto 1rem; /* Center the image */
+        display: block; /* Make the image a block element */
+    }
+
+    nav li {
+        display: block; /* Navigation links stacked vertically */
+        margin: 0.5rem 0;
+    }
+}
