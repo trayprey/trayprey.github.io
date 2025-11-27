@@ -1,7 +1,7 @@
-/* Dark Mode Only - Optimized */
+/* Dark Mode + Interactive Animations */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* dark background */
+    background-color: #121212;
     color: #e0e0e0;
     display: flex;
     justify-content: center;
@@ -12,17 +12,17 @@ body {
 }
 
 .card {
-    background-color: #1e1e1e; /* dark card */
+    background-color: #1e1e1e;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     width: 350px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 .card-header {
@@ -30,6 +30,11 @@ body {
     color: #ffffff;
     padding: 20px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card-header {
+    background-color: #353535;
 }
 
 .avatar {
@@ -37,9 +42,15 @@ body {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* soft border */
+    border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(30, 144, 255, 0.6);
 }
 
 .name {
@@ -49,17 +60,35 @@ body {
 
 .card-content {
     padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .card-content {
+    background-color: #242424;
 }
 
 .game-info, .contact-info, .business-info, .community-info {
     margin-bottom: 15px;
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover .game-info,
+.card:hover .contact-info,
+.card:hover .business-info,
+.card:hover .community-info {
+    border-color: #444;
 }
 
 h3 {
     margin-top: 0;
     color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: #ffffff;
 }
 
 p {
@@ -69,12 +98,13 @@ p {
 a {
     color: #1e90ff;
     text-decoration: none;
-    transition: text-shadow 0.2s;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
-    text-shadow: 0 0 4px rgba(30, 144, 255, 0.6);
+    text-shadow: 0 0 6px rgba(30, 144, 255, 0.8);
+    transform: scale(1.05);
 }
 
 .card-footer {
@@ -84,18 +114,29 @@ a:hover {
     font-style: italic;
     color: #aaa;
     border-top: 1px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card-footer {
+    background-color: #333333;
+    color: #ccc;
 }
 
 .quote {
     margin: 0;
 }
 
-/* Images inside card content */
 .card-content img {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     filter: brightness(0.85);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-content img:hover {
+    transform: scale(1.05);
+    filter: brightness(1);
 }
 
 /* Responsive */
