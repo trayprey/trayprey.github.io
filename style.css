@@ -1,100 +1,151 @@
-/* Reset */
+with my HTML and CSS code, make my new website feel like it's a homepage where I can add my favorite links I visit often. Make it similar to a Brave web browser homepage feel. My google search engine ID is "2408a0c240aa94213".
+
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trayprey</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="trayprey_logo (square).png" type="image/x-icon">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="trayprey_logo (square).png" alt="Avatar" class="avatar">
+            <h2 class="name">trayprey</h2>
+        </div>
+
+        <div class="card-content">
+            <div class="game-info">
+                <h3>Favorite Game</h3>
+                <p>Counter Strike-2 & HITMAN World of Assassination</p>
+
+                <h3>Gaming Platform</h3>
+                <p>PC</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:trayprey@gmail.com">trayprey@gmail.com</a></p>
+            </div>
+
+            <div class="business-info">
+                <h3>Socials</h3>
+                <p>Instagram: <a href="https://www.instagram.com/trayprey/">trayprey</a></p>
+                <p>Twitch: <a href="https://www.twitch.tv/trayprey">trayprey</a></p>
+                <p>Twitter: <a href="https://www.twitter.com/trayprey/">trayprey</a></p>
+                <p>YouTube: <a href="https://www.youtube.com/@trayprey">trayprey</a></p>
+            </div>
+
+            <div class="community-info">
+                <h3>Community</h3>
+                <p>Facebook Page: <a href="https://www.facebook.com/profile.php?id=61573062927956">trayprey</a></p>
+                <p>Discord Server: <a href="https://discord.gg/89TKNn4dD5">trayprey</a></p>
+                <p>Steam Community: <a href="https://steamcommunity.com/groups/trayprey">trayprey</a></p>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <p class="quote">"The snow goose need not bathe to make itself white. Neither need you do anything but be yourself." - Lao Tzu</p>
+        </div>
+    </div>
+</body>
+</html>
+
+CSS:
+/* style.css */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #262626);
-    color: #fff;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Profile Card */
-.profile-card {
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    margin-top: 40px;
 }
 
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 3px solid #ffffff22;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
 }
 
-.profile-card h1 {
-    margin-top: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 1.8rem;
+.name {
+    margin: 0;
 }
 
-/* Search Bar */
-.search-bar {
-    margin-top: 40px;
-    display: flex;
-    width: 70%;
-    max-width: 650px;
+.card-content {
+    padding: 20px;
 }
 
-.search-bar input {
-    flex: 1;
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px 0 0 8px;
-    outline: none;
-    background: #ffffffdd;
+.game-info, .contact-info, .business-info, .community-info {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
-.search-bar button {
-    padding: 15px 25px;
-    background: #ff7a00;
-    border: none;
-    border-radius: 0 8px 8px 0;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
+h3 {
+    margin-top: 0;
+    color: #555;
 }
 
-.search-bar button:hover {
-    background: #e46e00;
-}
-
-/* Top Sites */
-.top-sites {
-    margin-top: 45px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px;
-    width: 80%;
-    max-width: 900px;
-}
-
-.site-card {
-    background: #ffffff15;
-    padding: 18px 0;
-    text-align: center;
-    border-radius: 14px;
+a {
+    color: #007bff;
     text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: background 0.25s, transform 0.15s;
-    backdrop-filter: blur(8px);
 }
 
-.site-card:hover {
-    background: #ffffff30;
-    transform: scale(1.07);
+a:hover {
+    text-decoration: underline;
+}
+
+.card-footer {
+    background-color: #f8f8f8;
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    border-top: 1px solid #eee;
+}
+
+.quote {
+    margin: 0;
 }
 
 /* Responsive */
-@media (max-width: 480px) {
-    .search-bar {
+@media (max-width: 400px) {
+    .card {
         width: 90%;
     }
 }
